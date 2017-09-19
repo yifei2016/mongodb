@@ -1,0 +1,36 @@
+MongoDB är en NoSQL-databas. NoSQL brukar uttydas “Not only SQL”, och SQL brukar i sin tur
+uttydas “Structured Query Language”.
+
+NoSQL omfattar en mängd olika databasvarianter, och kan kännetecknas av att de ofta har
+en “friare” struktur än SQL, vilket innebär att de har en objektorienterad eller dokumentorienterad
+struktur till skillnad från den traditionella relations-databasformen SQL.
+
+Generellt kan man också säga att SQL delar upp sin data i fler separata tabeller,
+vilket gör att man via querys får plocka information från flera platser, medan man
+i NoSQL oftast har informationen mer samlad.
+
+
+I Mongos fall är objektet sparat som BSON (binary JSON), vilket liknar JSON i mångt och mycket,
+men har några andra datatyper (date, samt inte bara ett siffervärde utan delar upp dem i int,
+long och decimal).
+
+
+Där document är den minsta enheten. Ett document är ett objekt med egenskap:värde-par.
+Flera document som logiskt hör ihop samlas i en collection, och en eller flera collections
+utgör en databas.
+
+Det finns inga krav - förutom de vi själva ställer - när vi lagrar data i våra document.
+Där SQL-databaser arbetar utifrån fördefinierade egenskaper kan vi i MongoDB vara mycket friare.
+
+ID-objektet används för att skapa en indexering av collections, vilket gör att vi snabbt kan
+hitta data och utföra andra operationer.
+Om vi vill kan vi skapa och använda egna index, men oftast är det enklast att låta MongoDB
+sköta om indexeringen.
+
+Ett document sparar alltså i formen egenskaper:värden, och värden kan vara i form av andra objekt
+(kallas ofta embedded documents), arrayer, date, timestamp, int, long och decimal. De tre
+sistnämnda är olika siffervärden.
+
+
+Maxstorlek på ett document är 16Mb. Detta är främst ett skydd ifall vi råkar skriva kod som ökar ett
+document lavinartat.雪崩

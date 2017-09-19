@@ -1,0 +1,19 @@
+Själva servern startas med mongod, klienten (shell) med mongo.
+
+I mongo shell kan vi administrera databasen och utföra diverse CRUD-operationer.
+
+https://docs.mongodb.com/manual/mongo/
+När vi valt en databas att använda, utgör den objektet db.
+
+
+Filter funkar på samma sätt som när vi gör en query. Villkor (options) kan bland annat vara upsert = true,
+dvs om dokumentet INTE finns, så skapar vi det, annars uppdaterar vi det.
+
+Dessutom bör man tänka på att updateOne behandlar det första document det hittar,
+vilket också ställer krav på vad vi använder som filter.
+
+db.[collection name].updateOne(
+{ name: “Felix” },
+{ $set: { age: 41 } },
+{ upsert: true }
+)
