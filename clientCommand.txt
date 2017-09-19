@@ -19,3 +19,15 @@ Read
 
 db.films.find({title: 'ape', year: {$gt: 1900}}).pretty() =
 db.films.find({$and: [{title: 'ape'}, {year: {$gt: 1900}}]}).pretty()
+
+
+NoSQL as "Not Only SQL", not just SQL meaning, that is, mixed with the associated database and NoSQL
+database to achieve the best storage effect.
+
+NoSQL database is to use Key-Value data model to solve the huge data changes difficulty.
+
+Key-Value mode is to simplify the structure of a data to only one Key value corresponds
+to a Value value, there is no correlation between each data,
+so you can cut or adjust, you can also spread to a different server to create a copy.
+
+http://www.ithome.com.tw/news/92506
