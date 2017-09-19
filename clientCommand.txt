@@ -1,0 +1,21 @@
+Read
+
+1: Visa bara de som är mellan 2-45 år och har en bil.
+
+db.users.find({age: {$gt: 2, $lt: 45},car: {$exists: true}}).pretty()
+
+2: Visa bara de som är yngre än 18 år eller äldre än 65 år.
+
+db.users.find({$or: [{age: {$lt: 18}},{age: {$gt: 65}}]}).pretty()
+
+
+Update
+
+1:Visa document som alla personer som är mindre än 4 och som har en car.model egenskap
+
+db.users.find({$or: [{age: {$lt: 4}},{"car.model": {$exists: true}}]}).pretty()
+
+Read
+
+db.films.find({title: 'ape', year: {$gt: 1900}}).pretty() =
+db.films.find({$and: [{title: 'ape'}, {year: {$gt: 1900}}]}).pretty()
