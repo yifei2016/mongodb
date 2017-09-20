@@ -1,3 +1,4 @@
+De kommandon vi skriver för att manipulera databasen kallas för queries (en query, flera queries).
 Read
 
 1: Visa bara de som är mellan 2-45 år och har en bil.
