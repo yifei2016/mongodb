@@ -1,0 +1,10 @@
+Det är en collection som har en fast storlek på ett antal document och maxstorlek per document.
+
+Det innebär att när collectionen når upp till maxantalet så slängs det äldsta document
+automatiskt när ett ny skrivs in.
+
+Fördelarna är bl a att det sparar utrymme, men bland nackdelarna finns att storleken
+på varje document inte kan öka när det väl tagit plats i en capped collection.
+
+I de fall då man behöver spara enbart de tusen senaste av något eller skapa någon form av loggfil, kan man
+använda sig av MongoDBs capped collections. 
